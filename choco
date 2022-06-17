@@ -1,0 +1,29 @@
+namespace choco
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("{0}", Chocolate(15));
+            Console.ReadKey();
+        } 
+        static int Chocolate(int x)
+        {
+            int choc = 0, wrap = 0;
+
+            while (x > 0)
+            {
+                x--;
+                wrap++;
+                if (wrap == 3)
+                {
+                    wrap = 0;
+                    x++;
+                }
+                choc++;
+            }
+            return choc;
+        }
+    }
+
+}
